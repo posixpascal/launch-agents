@@ -17,6 +17,8 @@ To disable/enable a launch agent type:
 For other instructions refer to:
 `ruby launchcontrol.rb help`
 
+## Demo
+Watch an example asciinema cast here: https://asciinema.org/a/489o4z2zk36un3y45d1bsgpkh
 
 ## Contributing
 Make a pull request and I'll merge it. That's it. No Guidelines yet.
