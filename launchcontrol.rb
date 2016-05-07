@@ -1,8 +1,4 @@
 #!/usr/bin/ruby
-# @Author: Pascal Raszyk
-# @Date:   2016-05-06 23:34:05
-# @Last Modified by:   Pascal Raszyk
-# @Last Modified time: 2016-05-07 12:06:30
 
 require_relative './lib/launchcontrol.rb'
 require 'terminal-table'
@@ -62,13 +58,13 @@ class LaunchControlCli < Thor
 			format = options[:format]
 		end
 		@launch_agents = LaunchControlCli.get_launch_agents()
+
 	    if format == "table"
 	    	rows = []
 	    	
 			@launch_agents.each_with_index do |li, index|
 				rows << [index + 1, li.id.color(:cyan), {:value => li.disabled ? "YES" : "NO", :alignment => :right}, {:value => li.run_at_load ? "YES" : "NO", :alignment => :right}]
 			end
-			
 			
 			table = Terminal::Table.new :title => "Launch Agents", :headings => ["ID", Rainbow("Name").bg(:cyan).color(:white), "Disabled", "Run At Load"], :rows => rows
 			puts table
@@ -93,6 +89,7 @@ class LaunchControlCli < Thor
 	    else
 	    	puts "Unknown format."
 	    end
+	    
 	end
 
 	def self.get_launch_agents

@@ -1,6 +1,5 @@
 # LaunchControl
-## Get rid of nasty start up applications on MacOSX
-
+## Get rid of nasty start up applications on Mac OS X
 Whenever I restart my mac every few weeks I notice a huuuuge amount of applications which start up and idle in the background. Once you struggled with editing the launch agents by yourself you've noticed how much work it is to clean your system from all the junk. 
 LaunchControl tries to make enabling disabling and viewing launch agents easy. 
 
@@ -10,6 +9,13 @@ Not only does it disable/enable startup items, it allows you to edit specific la
 
 It does bundle an interactive cli application as well as a handy library to parse launchagents with ease.
 Build with love and ruby.
+
+## Dependencies
+You need ruby and bundler. Basically pre-installed on MacOS X.
+
+## Installation
+Run `bundle install` to install required dependencies. 
+**DO NOTE** Some launch agents require sudo privileges so make sure you've installed the dependencies for the root user as well.
 
 ## Instructions
 To get a list of all launch agents type: 
