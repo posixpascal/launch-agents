@@ -19,8 +19,7 @@ class LaunchControlCli < Thor
 		tbd_li = @launch_agents.select { |li|
 			(li.id == id or id == "--all")
 		}
-		if tbd_li.nil?
-		else
+		unless tbd_li.nil?
 			tbd_li.each do |li| 
 				if LaunchControl.enable(li) 
 					puts "Successfully enabled: #{li.id}"
@@ -39,8 +38,7 @@ class LaunchControlCli < Thor
 		tbd_li = @launch_agents.select { |li|
 			(li.id == id or id == "--all")
 		}
-		if tbd_li.nil?
-		else
+		unless tbd_li.nil?
 			tbd_li.each do |li| 
 				if LaunchControl.disable(li) 
 					puts "Successfully disabled: #{li.id}"

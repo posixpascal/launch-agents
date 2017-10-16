@@ -90,8 +90,8 @@ module LaunchControl
 		def parse_launch_agent launch_agent
 			li = LaunchAgent.new(launch_agent)
 
-			parser = Plist::parse_xml(launch_agent)
 			begin
+				parser = Plist::parse_xml(launch_agent)
 				source = open(resolve_symlinks(launch_agent), "r").read()
 			rescue Exception => e
 				# symlink detected. skip it
