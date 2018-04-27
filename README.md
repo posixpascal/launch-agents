@@ -33,6 +33,7 @@ The yard doc is bundled within the repository. I'll add an online mirror as soon
 
 ## Demo
 Watch an example asciinema cast here: https://asciinema.org/a/489o4z2zk36un3y45d1bsgpkh
+[![asciicast](https://asciinema.org/a/489o4z2zk36un3y45d1bsgpkh.png)](https://asciinema.org/a/489o4z2zk36un3y45d1bsgpkh)
 
 ## Contributing
 Make a pull request and I'll merge it. That's it. No Guidelines yet.
